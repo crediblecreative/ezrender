@@ -27,6 +27,9 @@ HTML template renderer
        }
     }
 
+    res.render('template-file', options);
+
+
 Parameters:
   - *filePath* {string} file name to read, minus extension
   - *options* {object} input options (see description for important details)
