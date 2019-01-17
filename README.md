@@ -24,14 +24,14 @@ Controller Overview:
   
   The 'options' object has the following structure. The 'decorations' property is optional, but if present will be applied to all *{{{ patterns }}}* unless overridden by the pattern's own style. In the following example values stored in a user's cookie are being rendered.
 
-    ```javascript
+  ```javascript
     const app = express();
     const ezrender = require('ezrender');
 
     app.engine('html', ezrender);
     app.set('views', '/public/html');
     app.set('view engine', 'html');
-    ```
+  ```
 
 Parameters:
   - *filePath* {string} file name to read, minus extension
