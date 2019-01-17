@@ -5,13 +5,14 @@ Installation:
 
 Server Overview:
   - Install as middleware in your server.js file
-
+    ```javascript
     const app = express();
     const ezrender = require('ezrender');
 
     app.engine('html', ezrender);
     app.set('views', appRoot + '/public/html');
     app.set('view engine', 'html');
+    ```
 
 Controller Overview:
   - Input patterns are in the 'patterns' property of the 'options' parameter
@@ -20,7 +21,7 @@ Controller Overview:
   - *{{% partials %}}* are filenames of partials which are imported before any other patterns are rendered
   
   The 'options' object has the following structure. The 'decorations' property is optional, but if present will be applied to all {{{ patterns }}} unless overridden by the pattern's own style. In the following example values stored in a user's cookie are being rendered.
-
+    ```javascript
     let cookieValues = JSON.parse(req.cookies.cookie_name).cookie_properties;
 
     let options = {
@@ -43,7 +44,7 @@ Controller Overview:
     }
 
     res.render('template-file', options);
-
+    ```
 
 Parameters:
   - *filePath* {string} file name to read, minus extension
