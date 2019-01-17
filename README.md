@@ -23,7 +23,7 @@
   - Input patterns are in the 'patterns' property of the 'options' parameter
   - The 'options' object has the following structure. The 'decorations' property is optional, but if present will be applied to all *{{{ patterns }}}* unless overridden by the pattern's own style. In the following example values stored in a user's cookie are being rendered.
 
-  ```javascript
+    ```javascript
     let cookieValues = JSON.parse(req.cookies.cookie_name).cookie_properties;
 
     let options = {
@@ -46,7 +46,7 @@
     }
 
     res.render('template-file', options);
-  ```
+    ```
 
   - Parameters:
     - *filePath* {string} file name to read, minus extension
