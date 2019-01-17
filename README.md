@@ -1,11 +1,11 @@
-HTML template renderer for Node.js Express applications
+##HTML template renderer for Node.js Express applications
 
 
-Installation:
+###Installation:
   npm install ezrender
 
 
-Server Overview:
+###Server Overview:
   - Configure in your server.js file (or wherever you've configured Express)
   - The '/public/html' path parameter in the first 'app.set()' statement should point to the directory where your HTML templates and partials are stored
 
@@ -19,7 +19,7 @@ Server Overview:
     ```
 
 
-Controller Overview:
+###Controller Overview:
   - Input patterns are in the 'patterns' property of the 'options' parameter
   - The 'options' object has the following structure. The 'decorations' property is optional, but if present will be applied to all *{{{ patterns }}}* unless overridden by the pattern's own style. In the following example values stored in a user's cookie are being rendered.
 
@@ -57,7 +57,7 @@ Controller Overview:
     - *callback* {function} function with rendered HTML as a parameter
 
 
-Template Overview:
+###Template Overview:
 
   - In the template the following are matched and rendered:
     - *{{{ patterns }}}* are rendered with styles, if they have a 'style' property
