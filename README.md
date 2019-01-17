@@ -1,4 +1,19 @@
-HTML template renderer 
+HTML template renderer for Node.js Express applications
+
+Installation:
+  npm install ezrender
+
+Server Overview:
+  - Install as middleware in your server.js file
+
+    const app = express();
+    const ezrender = require('ezrender');
+
+    app.engine('html', ezrender);
+    app.set('views', appRoot + '/public/html');
+    app.set('view engine', 'html');
+
+Controller Overview:
   - Input patterns are in the 'patterns' property of the 'options' parameter
   - *{{{ patterns }}}* are rendered with styles, if they have a 'style' property
   - *{{ patterns }}* are rendered without styles, even if they have a 'style' property
