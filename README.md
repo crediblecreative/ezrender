@@ -85,7 +85,7 @@
     {{{ email }}}
     ```
   - Footer template
-    - If the path is the same as in the Server Overview, the actual location would be '/public/html/header.html'
+    - If the path is the same as in the Server Overview, the actual location would be '/public/html/footer.html'
     ```html
     {{ copyright-notice }}
     ```
