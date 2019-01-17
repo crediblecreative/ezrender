@@ -28,22 +28,26 @@
 
     let options = {
        decorations: {
-           style: '&ltspan style="color: deeppink"&gt@@@&lt/span&gt'
+           style: '<span style="color: deeppink">@@@</span>'
        },
        patterns: {
            'email': {
                value: cookieValues['email'],
-               style: '&ltspan style="color: skyblue"&gt@@@&lt/span&gt'
+               style: '<span style="color: skyblue">@@@</span>'
            },
            'first-name': {
                value: cookieValues['first-name']
            },
            'last-name': {
                value: cookieValues['last-name'],
-               style: '&ltspan style="color: orange"&gt@@@&lt/span&gt'
+               style: '<span style="color: orange">@@@</span>'
            },
            'main-content': {
                value: 'This is any arbitrary content....'
+           },
+           'copyright-notice': {
+               value: 'Copyright ME, 2019',
+               style: '<span style="font-size: 100px;">@@@</span>'
            }
        }
     }
@@ -77,3 +81,19 @@
     ```
   - Header template
     - If the path is the same as in the Server Overview, the actual location would be '/public/html/header.html'
+    ```html
+    {{{ email }}}
+    ```
+  - Footer template
+    - If the path is the same as in the Server Overview, the actual location would be '/public/html/header.html'
+    ```html
+    {{ copyright-notice }}
+    ```
+  - Rendered output:
+    ```html
+    <span style="color: skyblue">me@you.email</span>
+    Joe <input type="text" value="Joe" />
+    <span style="color: orange">Blow</span> <input type="text" value="Blow" />
+    <span style="color: deeppink">This is any arbitrary content....</span>
+    Copyright ME, 2019 <!-- No styling here, due to the {{ pattern }} ignoring styles -->
+    ```
