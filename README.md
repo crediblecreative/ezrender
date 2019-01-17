@@ -41,11 +41,14 @@
            'last-name': {
                value: cookieValues['last-name'],
                style: '&ltspan style="color: orange"&gt@@@&lt/span&gt'
+           },
+           'main-content': {
+               value: 'This is any arbitrary content....'
            }
        }
     }
 
-    res.render('template-file', options);
+    res.render('template-file-name-without-extension', options);
     ```
 
   - Parameters:
@@ -63,3 +66,14 @@
     - *{{{ patterns }}}* are rendered with styles, if they have a 'style' property
     - *{{ patterns }}* are rendered without styles, even if they have a 'style' property
     - *{{% partials %}}* are filenames of partials which are imported before any other patterns are rendered
+  - Base template
+    - If the path is the same as in the Server Overview, the actual location would be '/public/html/template-file-name-without-extension.html'
+    ```html
+    {{% header %}}
+    {{{ first-name }}} <input type="text" value="{{ first-name }}" />
+    {{{ last-name }}} <input type="text" value="{{ last-name }}" />
+    {{{ main-content }}}
+    {{% footer %}}
+    ```
+  - Header template
+    - If the path is the same as in the Server Overview, the actual location would be '/public/html/header.html'
