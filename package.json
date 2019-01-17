@@ -1,0 +1,24 @@
+{
+  "name": "ezrender",
+  "version": "1.0.0",
+  "description": "Easy server-side (Node.js Express) template rendering with support for HTML partials",
+  "main": "ezrender.js",
+  "scripts": {
+    "test": "echo \"Error: no tests for you!\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crediblecreative/ezrender"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "HTML template",
+    "template rendering",
+    "template renderer",
+    "HTML partial",
+    "HTML import"
+  ],
+  "author": "Credible Creative",
+  "license": "MIT"
+}
