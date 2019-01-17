@@ -5,6 +5,7 @@ Installation:
 
 Server Overview:
   - Install as middleware in your server.js file
+  
     ```javascript
     const app = express();
     const ezrender = require('ezrender');
@@ -21,6 +22,7 @@ Controller Overview:
   - *{{% partials %}}* are filenames of partials which are imported before any other patterns are rendered
   
   The 'options' object has the following structure. The 'decorations' property is optional, but if present will be applied to all {{{ patterns }}} unless overridden by the pattern's own style. In the following example values stored in a user's cookie are being rendered.
+
     ```javascript
     let cookieValues = JSON.parse(req.cookies.cookie_name).cookie_properties;
 
