@@ -1,8 +1,8 @@
 HTML template renderer 
   - Input patterns are in the 'patterns' property of the 'options' parameter
-  - {{{ patterns }}} are rendered with styles, if they have a 'style' property
-  - {{ patterns }} are rendered without styles, even if they have a 'style' property
-  - {{ %partials %}} are filenames of partials which are imported before any other patterns are rendered
+  - *{{{ patterns }}}* are rendered with styles, if they have a 'style' property
+  - *{{ patterns }}* are rendered without styles, even if they have a 'style' property
+  - *{{% partials %}}* are filenames of partials which are imported before any other patterns are rendered
   
   The 'options' object has the following structure. The 'decorations' property is optional, but if present will be applied to all {{{ patterns }}} unless overridden by the pattern's own style. In the following example values stored in a user's cookie are being rendered.
 
@@ -28,9 +28,9 @@ HTML template renderer
     }
 
 Parameters:
-  - filePath {string} file name to read, minus extension
-  - options {object} input options (see description for important details)
-  - callback {function} callback function from Express
+  - *filePath* {string} file name to read, minus extension
+  - *options* {object} input options (see description for important details)
+  - *callback* {function} callback function from Express
 
 Returns:
-  - callback {function} function with rendered HTML as a parameter
+  - *callback* {function} function with rendered HTML as a parameter
