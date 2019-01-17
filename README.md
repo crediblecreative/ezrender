@@ -27,7 +27,10 @@ HTML template renderer
        }
     }
 
-@param {string} filePath file name to read, minus extension
-@param {object} options input options (see description for important details)
-@param {function} callback callback function from Express
-@returns {function} callback function with rendered HTML as a parameter
+Parameters:
+  - filePath {string} file name to read, minus extension
+  - options {object} input options (see description for important details)
+  - callback {function} callback function from Express
+
+Returns:
+  - callback {function} function with rendered HTML as a parameter
