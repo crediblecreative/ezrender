@@ -25,7 +25,12 @@ Controller Overview:
   The 'options' object has the following structure. The 'decorations' property is optional, but if present will be applied to all *{{{ patterns }}}* unless overridden by the pattern's own style. In the following example values stored in a user's cookie are being rendered.
 
     ```javascript
-    console.log(tester);
+    const app = express();
+    const ezrender = require('ezrender');
+
+    app.engine('html', ezrender);
+    app.set('views', '/public/html');
+    app.set('view engine', 'html');
     ```
 
 Parameters:
@@ -35,3 +40,26 @@ Parameters:
 
 Returns:
   - *callback* {function} function with rendered HTML as a parameter
+
+  let cookieValues = JSON.parse(req.cookies.cookie_name).cookie_properties;
+
+    let options = {
+       decorations: {
+           style: '&ltspan style="color: deeppink"&gt@@@&lt/span&gt'
+       },
+       patterns: {
+           'email': {
+               value: cookieValues['email'],
+               style: '&ltspan style="color: skyblue"&gt@@@&lt/span&gt'
+           },
+           'first-name': {
+               value: cookieValues['first-name']
+           },
+           'last-name': {
+               value: cookieValues['last-name'],
+               style: '&ltspan style="color: orange"&gt@@@&lt/span&gt'
+           }
+       }
+    }
+
+    res.render('template-file', options);
