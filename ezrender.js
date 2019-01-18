@@ -4,7 +4,7 @@
 
 const fs = require('fs');
 
-exports.ezrender = (filePath, options, callback) => { 
+module.exports = function ezrender(filePath, options, callback) { 
     /**
     * HTML template renderer <br />
     * -- Input patterns are in the 'patterns' property of the 'options' parameter <br />

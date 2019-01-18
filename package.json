@@ -1,6 +1,6 @@
 {
   "name": "ezrender",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Easy server-side (Node.js Express) template rendering with support for HTML partials",
   "main": "ezrender.js",
   "scripts": {
